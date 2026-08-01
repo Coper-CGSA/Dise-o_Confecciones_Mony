@@ -1,4 +1,4 @@
-# Confecciones Mony — Sitio Web
+#   Confecciones Mony — Sitio Web
 
 **Clases de Costura Personalizadas en Constitución, Chile**
 Sitio web de una sola página (one-page scroll), orgánico, minimalista y con

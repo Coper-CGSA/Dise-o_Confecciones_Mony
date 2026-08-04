@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site/site-header";
+import { PhotoHeader } from "@/components/site/photo-header";
 import { Hero } from "@/components/site/hero";
 import { Story } from "@/components/site/story";
 import { Classes } from "@/components/site/classes";
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="relative flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
+        <PhotoHeader />
         <Hero />
         <Story />
         <Classes />

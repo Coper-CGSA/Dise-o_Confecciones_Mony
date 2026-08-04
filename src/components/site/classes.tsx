@@ -25,8 +25,8 @@ const DETAILS = [
   {
     icon: SparkleIcon,
     color: "purple",
-    title: "Yo pongo los materiales",
-    text: "Tú solo trae las ganas. Yo me encargo del resto.",
+    title: "Solo trae tu tela (o ni eso)",
+    text: "Yo pongo máquina, tijeras, alfileres, tiza y base. Si te falta tela, avísame y la conseguimos alguna que te guste.",
   },
   {
     icon: ScissorsIcon,
@@ -91,14 +91,14 @@ export function Classes() {
           </Reveal>
         </div>
 
-        {/* Big image banner — real photo of atelier for humanity */}
+        {/* Big image banner — original atelier photo (aspect 1.78 matches real-atelier.jpg) */}
         <Reveal delay={1}>
           <figure className="relative mt-14">
             <div className="overflow-hidden blob-mask-3 shadow-2xl shadow-purple-brand/20 ring-1 ring-white/40">
               <img
                 src="/images/real-atelier.jpg"
                 alt="Costurera trabajando en máquina de coser en taller luminoso, clases de costura en Constitución"
-                className="h-full w-full object-cover aspect-[16/9] sm:aspect-[2/1]"
+                className="h-full w-full object-cover aspect-[16/9]"
                 loading="lazy"
                 width={1600}
                 height={900}
@@ -128,6 +128,21 @@ export function Classes() {
                 Desde principiantes hasta avanzadas. Una lista abierta — si tienes otra idea, cuéntamela.
               </p>
             </Reveal>
+            {/* Photo beneath the intro paragraph — vertical portrait, natural aspect */}
+            <Reveal delay={1}>
+              <figure className="mt-6">
+                <div className="overflow-hidden blob-mask-2 shadow-xl ring-1 ring-white/40">
+                  <img
+                    src="/images/photos/mony-portrait-2.jpg"
+                    alt="Mony enseñando a coser en máquina, clases personalizadas en Constitución"
+                    className="h-full w-full object-cover aspect-[4/5]"
+                    loading="lazy"
+                    width={600}
+                    height={750}
+                  />
+                </div>
+              </figure>
+            </Reveal>
           </div>
 
           <div className="lg:col-span-7">
@@ -151,7 +166,7 @@ export function Classes() {
           </div>
         </div>
 
-        {/* Image triptych — illustration + real photo + illustration, aligned */}
+        {/* Image triptych — original illustrations (hand-drawn feel) */}
         <Reveal>
           <div className="mt-16 grid grid-cols-2 items-start gap-5 sm:gap-6 lg:grid-cols-3 lg:gap-8">
             <figure className="relative">

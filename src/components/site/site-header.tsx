@@ -50,7 +50,7 @@ export function SiteHeader() {
           aria-label="Confecciones Mony — inicio"
           className="shrink-0"
         >
-          <BrandLogo size="sm" />
+          <BrandLogo size="md" showLockup />
         </a>
 
         {/* Desktop nav */}

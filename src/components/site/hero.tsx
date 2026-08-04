@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden paper-texture pt-28 pb-16 sm:pt-32 lg:pt-36 lg:pb-24"
+      className="relative overflow-hidden paper-texture pt-10 pb-16 sm:pt-14 lg:pt-16 lg:pb-24"
     >
       <OrganicDecor variant="trio" />
 
@@ -109,7 +109,7 @@ export function Hero() {
                 className="h-64 w-64 -bottom-8 -right-6"
               />
 
-              {/* Main hero image in organic blob mask */}
+              {/* Main hero image in organic blob mask — original illustration */}
               <div className="relative">
                 <div className="overflow-hidden blob-mask-1 shadow-2xl shadow-purple-brand/20 ring-1 ring-white/40">
                   <img
@@ -119,6 +119,18 @@ export function Hero() {
                     loading="eager"
                     width={768}
                     height={1344}
+                  />
+                </div>
+
+                {/* Complement: real photo of Mony, overlapping bottom-right corner */}
+                <div className="absolute -bottom-6 -right-4 w-28 overflow-hidden blob-mask-3 shadow-xl ring-2 ring-white/70 sm:-right-6 sm:w-36 lg:w-44 animate-float-slower">
+                  <img
+                    src="/images/photos/mony-portrait-1.jpg"
+                    alt="Mony, profesora de costura, en su taller en Constitución"
+                    className="h-full w-full object-cover aspect-[3/4]"
+                    loading="eager"
+                    width={440}
+                    height={587}
                   />
                 </div>
 

@@ -1,0 +1,35 @@
+{
+  "name": "Confecciones Mony — Clases de Costura en Constitución",
+  "short_name": "Confecciones Mony",
+  "description": "Clases de costura personalizadas en Constitución, con Mónica Aguayo Varas. Más de 28 años de experiencia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf6ec",
+  "theme_color": "#e0218a",
+  "orientation": "portrait-primary",
+  "lang": "es-CL",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

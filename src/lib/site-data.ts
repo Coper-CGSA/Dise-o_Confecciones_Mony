@@ -3,6 +3,8 @@
 export const SITE = {
   brandFull: "Confecciones Mony",
   brandShort: "Mony",
+  // Full name of the profesora — used in signatures, quotes, and authorship.
+  founderName: "Mónica R. Aguayo Varas",
   city: "Constitución",
   region: "Región del Maule",
   // Título profesional completo y versión compacta para espacios reducidos.

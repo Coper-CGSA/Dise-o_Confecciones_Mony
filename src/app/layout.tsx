@@ -26,14 +26,17 @@ const dancingScript = Dancing_Script({
   weight: ["600", "700"],
 });
 
-const SITE_URL = "https://confeccionesmony.cl";
+const SITE_URL = "https://www.clasesdecosturas.cl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title:
-    "Confecciones Mony | Clases de Costura Personalizadas en Constitución",
+  title: {
+    default: "Confecciones Mony | Clases de Costura Personalizadas en Constitución",
+    template: "%s · Confecciones Mony",
+  },
   description:
-    "Aprende a coser a tu ritmo con Mony, Profesional en Diseño y Confección de Vestuario con más de 28 años de experiencia. Clases 100% personalizadas, presenciales en Constitución. ¡Escríbeme por WhatsApp!",
+    "Clases de costura 1 a 1 en Constitución, con Mónica Aguayo Varas — Profesional en Diseño y Confección de Vestuario con más de 28 años de experiencia. Iniciación, patronaje, confección, arreglos y costura para emprendimiento. Presencial, en taller o a domicilio.",
+  applicationName: "Confecciones Mony",
   keywords: [
     "clases de costura en Constitución",
     "profesora de costura Constitución",
@@ -43,28 +46,61 @@ export const metadata: Metadata = {
     "modista en Constitución",
     "Confecciones Mony",
     "clases de costura personalizadas",
+    "Mónica Aguayo Varas",
+    "patronaje Constitución",
+    "curso de costura Constitución",
   ],
-  authors: [{ name: "Confecciones Mony" }],
-  creator: "Confecciones Mony",
+  authors: [{ name: "Mónica Aguayo Varas", url: SITE_URL }],
+  creator: "Mónica Aguayo Varas",
+  publisher: "Confecciones Mony",
   alternates: {
     canonical: SITE_URL,
   },
+  // Favicon assets
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/favicon-180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
+  // Manifest for PWA / Android home screen
+  manifest: "/site.webmanifest",
   openGraph: {
-    title:
-      "Confecciones Mony | Clases de Costura Personalizadas en Constitución",
+    title: "Confecciones Mony · Clases de Costura Personalizadas en Constitución",
     description:
-      "Aprende a coser a tu ritmo con Mony, Profesional en Diseño y Confección de Vestuario con más de 28 años de experiencia. Clases 100% personalizadas, presenciales en Constitución.",
+      "Aprende a coser 1 a 1 con Mónica Aguayo Varas, Profesional en Diseño y Confección de Vestuario (+28 años de experiencia). Iniciación, patronaje, confección y arreglos. Presencial en Constitución o a domicilio.",
     url: SITE_URL,
     siteName: "Confecciones Mony",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Confecciones Mony — Clases de Costura Personalizadas en Constitución",
+        type: "image/png",
+      },
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Confecciones Mony — Clases de Costura Personalizadas en Constitución",
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Confecciones Mony | Clases de Costura Personalizadas en Constitución",
+    title: "Confecciones Mony · Clases de Costura Personalizadas en Constitución",
     description:
-      "Aprende a coser a tu ritmo con Mony, Profesional en Diseño y Confección de Vestuario con más de 28 años de experiencia. Clases 100% personalizadas en Constitución.",
+      "Aprende a coser 1 a 1 con Mónica Aguayo Varas, Profesional en Diseño y Confección de Vestuario (+28 años de experiencia). Presencial en Constitución o a domicilio.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -74,6 +110,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   category: "education",
@@ -83,9 +120,12 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Confecciones Mony",
+  alternateName: "Clases de Costura Mony",
   description:
-    "Clases de costura personalizadas en Constitución. Más de 28 años de experiencia en confección y docencia.",
+    "Clases de costura personalizadas en Constitución. Más de 28 años de experiencia en confección y docencia. Iniciación, patronaje, confección, arreglos y costura orientada a emprendimiento.",
   url: SITE_URL,
+  logo: `${SITE_URL}/images/brand-logo-hires.png`,
+  image: `${SITE_URL}/og-image.png`,
   email: "mony.a.varas@gmail.com",
   telephone: "+56981972791",
   address: {
@@ -99,13 +139,16 @@ const jsonLd = {
     "Clases de costura",
     "Confección de prendas",
     "Patronaje",
+    "Moldaje y corte",
     "Arreglos de ropa",
     "Diseño de vestuario",
+    "Costura para emprendimiento",
   ],
   founder: {
     "@type": "Person",
-    name: "Mony",
-    jobTitle: "Profesional en Diseño y Confección de Vestuario y Profesora de Costura",
+    name: "Mónica Aguayo Varas",
+    jobTitle: "Profesional en Diseño y Confección de Vestuario",
+    description: "Profesora de costura con más de 28 años de experiencia en confección, diseño y docencia.",
   },
 };
 

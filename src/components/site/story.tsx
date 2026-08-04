@@ -15,9 +15,10 @@ export function Story() {
       />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
-        {/* Image — real photo of hands stitching for humanity */}
+        {/* Image — real photo of hands stitching + portrait for humanity */}
         <Reveal className="order-2 lg:order-1">
-          <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div className="relative mx-auto mb-10 max-w-md lg:mb-14 lg:max-w-none">
+            {/* Main photo — hands stitching (existing) */}
             <div className="overflow-hidden blob-mask-2 shadow-2xl shadow-orange-brand/15 ring-1 ring-white/40">
               <img
                 src="/images/real-hands-stitching.jpg"
@@ -28,9 +29,25 @@ export function Story() {
                 height={1024}
               />
             </div>
+
+            {/* Secondary photo — portrait of Mony, overlapping corner */}
+            <div className="absolute -bottom-8 -right-4 w-32 overflow-hidden blob-mask-3 shadow-xl ring-2 ring-white/60 sm:-right-6 sm:w-40 lg:w-48">
+              <img
+                src="/images/photos/mony-portrait-3.jpg"
+                alt="Mony, profesora de costura, retrato en su taller"
+                className="h-full w-full object-cover aspect-[3/4]"
+                loading="lazy"
+                width={480}
+                height={640}
+              />
+            </div>
+
             {/* signature tag */}
             <div className="absolute -bottom-5 left-6 rotate-[-3deg] rounded-full bg-fuchsia-brand px-5 py-2.5 text-white shadow-xl">
-              <p className="font-script text-2xl leading-none">Mony</p>
+              <p className="font-script text-2xl leading-none">Mónica</p>
+              <p className="mt-0.5 text-[0.6rem] font-sans font-semibold uppercase tracking-[0.18em] text-white/85">
+                Aguayo Varas
+              </p>
             </div>
           </div>
         </Reveal>
@@ -88,7 +105,7 @@ export function Story() {
               &ldquo;Enseño de cerca, a tu ritmo y al de cada persona.&rdquo;
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              — {SITE.brandShort}, {SITE.professionShort.toLowerCase()} en {SITE.city}
+              — {SITE.founderName}, {SITE.professionShort.toLowerCase()} en {SITE.city}
             </p>
           </Reveal>
         </div>

@@ -10,15 +10,20 @@ export function Contact() {
       id="contacto"
       className="relative overflow-hidden py-20 sm:py-28"
     >
-      {/* Decorative watercolor background */}
+      {/* Background — retouched human photo + cream overlay for brand cohesion */}
       <div aria-hidden className="absolute inset-0">
         <img
-          src="/images/decorative-blobs.png"
+          src="/images/photos/mony-scene-2.jpg"
           alt=""
-          className="h-full w-full object-cover opacity-25"
+          aria-hidden
+          className="h-full w-full object-cover opacity-30"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/80 to-background/95" />
+        <div
+          aria-hidden
+          className="absolute inset-0 mix-blend-soft-light opacity-40 bg-[linear-gradient(135deg,rgba(224,33,138,0.25)_0%,transparent_50%,rgba(0,167,181,0.25)_100%)]"
+        />
       </div>
 
       <BlobAccent color="fuchsia" className="h-72 w-72 -top-16 -left-16 opacity-70" />

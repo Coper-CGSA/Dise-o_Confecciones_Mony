@@ -46,6 +46,21 @@ export const CLASS_EXAMPLES: string[] = [
   "Costura orientada a emprendimiento", // 7
 ];
 
+// Logros / técnicas que se pueden aprender — tono motivacional con nomenclatura del rubro.
+// Se muestra en la sección de contacto para enganchar y aterrizar lo que se logra al tomar clases.
+export const ACHIEVEMENTS: string[] = [
+  "Realizar bastas y bastilla prolija",
+  "Confeccionar una prenda desde cero, desde el molde hasta el acabado",
+  "Dominar costuras básica, media y avanzada",
+  "Hacer ojales y colocar cierres sin miedo",
+  "Manejar entretelas para dar cuerpo y forma",
+  "Fileteado y sobrehilado profesional",
+  "Descoser, ajustar y corregir como una pro",
+  "Patronaje (moldaje y corte) a tu medida",
+  "Arreglos y reparaciones para alargar la vida de tu ropa",
+  "Costura para emprender y vender",
+];
+
 // Brand credentials / trust elements
 export const CREDENTIALS: { title: string; detail: string }[] = [
   {

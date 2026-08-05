@@ -32,8 +32,8 @@ export function Contact() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Two-column layout: contact (left) + what you'll achieve (right) */}
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
-          {/* LEFT — Contact & CTA */}
-          <div className="lg:col-span-5">
+          {/* LEFT — Contact & CTA (centered, self-contained panel) */}
+          <div className="text-center lg:col-span-5">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-fuchsia-brand ring-1 ring-fuchsia-brand/15 backdrop-blur">
                 <WhatsAppIcon className="h-3.5 w-3.5" />
@@ -49,14 +49,14 @@ export function Contact() {
             </Reveal>
 
             <Reveal delay={2}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
+              <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-muted-foreground text-pretty">
                 Un solo camino: escríbeme por WhatsApp y coordinamos tu primera clase. Sin
                 compromisos, primero conversamos.
               </p>
             </Reveal>
 
             <Reveal delay={3}>
-              <div className="mt-8 flex flex-col items-start gap-4">
+              <div className="mt-8 flex flex-col items-center gap-4">
                 <WhatsAppButton
                   size="lg"
                   className="px-10 py-5 text-lg"
@@ -70,9 +70,9 @@ export function Contact() {
               </div>
             </Reveal>
 
-            {/* Secondary channels — organic pills, not cards */}
+            {/* Secondary channels — organic pills, centered */}
             <Reveal delay={4}>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href={`mailto:${SITE.email}`}
                   className="inline-flex items-center gap-2 rounded-full bg-white/80 px-5 py-2.5 text-sm font-semibold text-foreground ring-1 ring-border backdrop-blur transition-all hover:-translate-y-0.5 hover:text-turquoise-brand hover:ring-turquoise-brand/40"
@@ -98,6 +98,35 @@ export function Contact() {
                   <WhatsAppIcon className="h-4 w-4 text-fuchsia-brand" />
                   {SITE.whatsappNumber}
                 </a>
+              </div>
+            </Reveal>
+
+            {/* Honest social proof — stacked vertically for narrow column harmony */}
+            <Reveal delay={3}>
+              <ul className="mx-auto mt-10 flex max-w-xs flex-col divide-y divide-orange-brand/15">
+                {SOCIAL_PROOF.map((s) => (
+                  <li key={s.label} className="py-3 text-center">
+                    <p className="font-display text-3xl font-bold text-fuchsia-brand">
+                      {s.stat}
+                    </p>
+                    <p className="mt-0.5 text-xs font-medium leading-tight text-muted-foreground sm:text-sm">
+                      {s.label}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            {/* Location & availability */}
+            <Reveal delay={4}>
+              <div className="mt-8 flex flex-col items-center justify-center gap-2">
+                <div className="flex items-center gap-2 text-sm font-medium text-foreground/80">
+                  <MapPinIcon className="h-5 w-5 text-orange-brand" />
+                  {SITE.city}, {SITE.region}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Consulta disponibilidad por interno o WhatsApp
+                </p>
               </div>
             </Reveal>
           </div>
@@ -145,36 +174,6 @@ export function Contact() {
             </Reveal>
           </div>
         </div>
-
-        {/* Honest social proof — organic stats, no fabricated testimonials */}
-        <Reveal delay={3}>
-          <div className="mx-auto mt-16 flex max-w-md items-stretch justify-center gap-2 sm:gap-4">
-            {SOCIAL_PROOF.map((s) => (
-              <div key={s.label} className="flex-1 text-center">
-                <p className="font-display text-3xl font-bold text-fuchsia-brand sm:text-4xl">
-                  {s.stat}
-                </p>
-                <p className="mt-1 text-xs font-medium leading-tight text-muted-foreground sm:text-sm">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        {/* Location & availability */}
-        <Reveal delay={4}>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
-            <div className="flex items-center gap-2 text-sm font-medium text-foreground/80">
-              <MapPinIcon className="h-5 w-5 text-orange-brand" />
-              {SITE.city}, {SITE.region}
-            </div>
-            <div className="hidden h-4 w-px bg-border sm:block" />
-            <p className="text-sm text-muted-foreground">
-              Consulta disponibilidad por interno o WhatsApp
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
